@@ -2,6 +2,50 @@
 <html>
 
     <head>
+        
+        <style rel="stylesheet" type="text/css">
+            #field{
+                    width: 720px;
+                    border-color: yellow;
+                    background-color: lightyellow;
+                    border:10px solid yellow;
+                    margin-bottom: 10px;
+                  }
+            
+            label
+            {
+                width: 180px,
+                display:Inline-block,
+                text-align: right,
+                text-align: top;               
+                    
+            }
+            
+            #change
+            {
+                width: auto;
+            }
+            
+            textarea
+            {
+                width: 360px,
+                height:50px;
+            }
+            
+            #lower
+            {
+                background-color: darkred;
+                color: white;
+            }
+            
+            #upper
+            {
+                color: white;
+                background-color: purple;
+            }
+        
+        
+        </style>
 
     </head>
 
@@ -9,38 +53,38 @@
     <h1>Please Enter the details </h1>
         
         <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.ph" method="post" enctype="multipart/form-data">
-        <fieldset>
+        <fieldset id="field">
         <legend>Your Face </legend>
         Your Image :<input type="file" method="post" required />
             <img id="preview">
         </fieldset>
       
         
-        <fieldset>
+        <fieldset id="field">
         <legend>Your General Details</legend>
         
-            <label for="name" >Name:</label>
+            <label for="name"  >Name:</label>
             <input type="text" id="name" required><br>
             
-            <label>Gender:</label>
+            <label id="lab">Gender:</label>
             <input type="radio" name="gender" id="male" value="male" >
-            <label for="male" >Male</label>
+            <label for="male" id="change" >Male</label>
 
             <input type="radio" name="gender" id="female" value="female" >         
-            <label for="female" >Female</label> <br>
+            <label for="female" id="change" >Female</label> <br>
 
             
             <label for="age" >Age:</label>
             <input type="number" id="age" value="18" required><br>
                     
-            <label for="dob" >Date of Birth:</label>
+            <label for="dob" id="lab" >Date of Birth:</label>
             <input type="date" id="dob" ><br>
             
-            <label for="favcolor">Favourite Color:</label>
+            <label for="favcolor" id="lab">Favourite Color:</label>
             <input type="color" id="favcolor"> <br>
             
             
-            <label for="country" >Which Country:</label>
+            <label for="country" id="lab" >Which Country:</label>
             <select id="country">
                 <option value="India" >India</option>
                 <option value="USA" >USA</option>
@@ -54,22 +98,22 @@
         </fieldset>
         
         
-        <fieldset>
+        <fieldset id="field">
         <legend> Your Indicators</legend>
-            <label for="height" >Height:</label>
-            <label for="height">Short</label>
+            <label for="height"  >Height:</label>
+            <label for="height" id="lower">Short</label>
             <input type="range" min="0" max="100" id="height" value="50">
-            <label for="height">Tall</label><br>
+            <label for="height" id="upper">Tall</label><br>
             
             
             <label for="salary" >Salary:</label>
-            <label for="salary">Poor</label>
+            <label for="salary" id="lower">Poor</label>
             <input type="range" min="0" max="100" id="salary" value="50">
-            <label for="salary">Rich</label>  
+            <label for="salary" id="upper">Rich</label>  
         </fieldset>
         
         
-        <fieldset>
+        <fieldset id="field">
         <legend>Your Contact Information</legend>
             
             <label for="emal" >Email:</label>
@@ -78,16 +122,16 @@
             <label for="mobile">Mobile:</label>
             <input id="mobile" type="tel" ><br>
             
-            <label for="addr" > Address"</label>
-             <textarea rows="4" id="addr" cols="50">
+            <label for="addr" > Address:</label>
+             <textarea>
             
             </textarea><br>
             
             
-            <label for="contact">Method to Contact you:</label>
-            <input type="checkbox" ><label>Email</label>
-            <input type="checkbox" ><label>Whatsapp</label>
-            <input type="checkbox" ><label>In-app chat</label>
+            <label for="contact" >Method to Contact you:</label>
+            <input type="checkbox" ><label id="change">Email</label>
+            <input type="checkbox" ><label id="change" >Whatsapp</label>
+            <input type="checkbox" ><label id="change" >In-app chat</label>
             
         
         
