@@ -7,9 +7,96 @@
 
     <body>
     <h1>Please Enter the details </h1>
-        Hello World you doing
         
-        how are
+        <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.ph" method="get">
+        <fieldset>
+        <legend>Your Face </legend>
+        Your Image :<input type="file" method="post" required />
+            <img id="preview">
+        </fieldset>
+      
+        
+        <fieldset>
+        <legend>Your General Details</legend>
+        
+            <label for="name" >Name:</label>
+            <input type="text" id="name" required><br>
+            
+            <label>Gender:</label>
+            <input type="radio" name="gender" id="male" value="male" >
+            <label for="male" >Male</label>
+
+            <input type="radio" name="gender" id="female" value="female" >         
+            <label for="female" >Female</label> <br>
+
+            
+            <label for="age" >Age:</label>
+            <input type="number" id="age" value="18" required><br>
+                    
+            <label for="dob" >Date of Birth:</label>
+            <input type="date" id="dob" ><br>
+            
+            <label for="favcolor">Favourite Color:</label>
+            <input type="color" id="favcolor"> <br>
+            
+            
+            <label for="country" >Which Country:</label>
+            <select id="country">
+                <option value="India" >India</option>
+                <option value="USA" >USA</option>
+                <option value="Argentina" >Argentina</option>
+                <option value="Bhutan" >Bhutan</option>
+                <option value="Myanmar" >Myanmar</option>
+                <option value="noselection" >No selection</option>             
+            </select>
+            
+                    
+        </fieldset>
+        
+        
+        <fieldset>
+        <legend> Your Indicators</legend>
+            <label for="height" >Height:</label>
+            <label for="height">Short</label>
+            <input type="range" min="0" max="100" id="height" value="50">
+            <label for="height">Tall</label><br>
+            
+            
+            <label for="salary" >Salary:</label>
+            <label for="salary">Poor</label>
+            <input type="range" min="0" max="100" id="salary" value="50">
+            <label for="salary">Rich</label>  
+        </fieldset>
+        
+        
+        <fieldset>
+        <legend>Your Contact Information</legend>
+            
+            <label for="emal" >Email:</label>
+            <input type="email" id="emal" required><br>
+            
+            <label for="mobile">Mobile:</label>
+            <input id="mobile" type="tel" ><br>
+            
+            <label for="addr" > Address"</label>
+             <textarea rows="4" id="addr" cols="50">
+            
+            </textarea><br>
+            
+            
+            <label for="contact">Method to Contact you:</label>
+            <input type="checkbox" ><label>Email</label>
+            <input type="checkbox" ><label>Whatsapp</label>
+            <input type="checkbox" ><label>In-app chat</label>
+            
+        
+        
+        </fieldset>
+            <input type="submit" value="Send" >
+        </form>
+        
+        
+    
     </body>
 
 </html>
