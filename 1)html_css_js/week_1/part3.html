@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+        <style rel="stylesheet" type="text/css">
+            #field{
+                    width: 720px;
+                    border-color: yellow;
+                    background-color: lightyellow;
+                    border:10px solid yellow;
+                    margin-bottom: 10px;
+                  }
+            
+            label
+            {
+                width: 180px,
+                display:Inline-block,
+                text-align: right,
+                text-align: top;               
+                    
+            }
+            
+            #change
+            {
+                width: auto;
+            }
+            
+            textarea
+            {
+                width: 360px,
+                height:50px;
+            }
+            
+            #lower
+            {
+                background-color: darkred;
+                color: white;
+            }
+            
+            #upper
+            {
+                color: white;
+                background-color: purple;
+            }
+        
+        
+        </style>
+
+    </head>
+
+    <body>
+    <h1>Please Enter the details </h1>
+        
+        <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.ph" method="post" enctype="multipart/form-data">
+        <fieldset id="field">
+        <legend>Your Face </legend>
+        Your Image :<input type="file" method="post" required />
+            <img id="preview">
+        </fieldset>
+      
+        
+        <fieldset id="field">
+        <legend>Your General Details</legend>
+        
+            <label for="name"  >Name:</label>
+            <input type="text" id="name" required><br>
+            
+            <label id="lab">Gender:</label>
+            <input type="radio" name="gender" id="male" value="male" >
+            <label for="male" id="change" >Male</label>
+
+            <input type="radio" name="gender" id="female" value="female" >         
+            <label for="female" id="change" >Female</label> <br>
+
+            
+            <label for="age" >Age:</label>
+            <input type="number" id="age" value="18" required><br>
+                    
+            <label for="dob" id="lab" >Date of Birth:</label>
+            <input type="date" id="dob" ><br>
+            
+            <label for="favcolor" id="lab">Favourite Color:</label>
+            <input type="color" id="favcolor"> <br>
+            
+            
+            <label for="country" id="lab" >Which Country:</label>
+            <select id="country">
+                <option value="India" >India</option>
+                <option value="USA" >USA</option>
+                <option value="Argentina" >Argentina</option>
+                <option value="Bhutan" >Bhutan</option>
+                <option value="Myanmar" >Myanmar</option>
+                <option value="noselection" >No selection</option>             
+            </select>
+            
+                    
+        </fieldset>
+        
+        
+        <fieldset id="field">
+        <legend> Your Indicators</legend>
+            <label for="height"  >Height:</label>
+            <label for="height" id="lower">Short</label>
+            <input type="range" min="0" max="100" id="height" value="50">
+            <label for="height" id="upper">Tall</label><br>
+            
+            
+            <label for="salary" >Salary:</label>
+            <label for="salary" id="lower">Poor</label>
+            <input type="range" min="0" max="100" id="salary" value="50">
+            <label for="salary" id="upper">Rich</label>  
+        </fieldset>
+        
+        
+        <fieldset id="field">
+        <legend>Your Contact Information</legend>
+            
+            <label for="emal" >Email:</label>
+            <input type="email" id="emal" required><br>
+            
+            <label for="mobile">Mobile:</label>
+            <input id="mobile" type="tel" ><br>
+            
+            <label for="addr" > Address:</label>
+             <textarea>
+            
+            </textarea><br>
+            
+            
+            <label for="contact" >Method to Contact you:</label>
+            <input type="checkbox" ><label id="change">Email</label>
+            <input type="checkbox" ><label id="change" >Whatsapp</label>
+            <input type="checkbox" ><label id="change" >In-app chat</label>
+            
+        
+        
+        </fieldset>
+            <input type="submit" value="Send" >
+        </form>
+        
+        
+    
+    </body>
+
+</html>
