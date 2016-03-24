@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <<title>Javascript guessing game</title>    
+        
+    </head>
+    
+    <body onload="do_game()">
+        
+    <script>
+        
+        var finished = false;
+        var colors = ["aqua" , "black","cyan","green","magenta","purple","red"];
+        var random_number = Math.random() * 7;
+        var guess_input_text;
+        var guesses = 0 ;
+        var arr;
+        var mybody;
+        
+        
+        random_number = Math.floor(random_number);
+    // optional
+        alert("Random number is " + random_number);
+               
+        
+        
+        function do_game()
+        {
+            mybody = document.getElementsByTagName("body")[0];
+            while(!finished)
+                {
+                    arr = colors.join(", ");
+                    console.log(arr);
+                    guess_input_text = prompt("I am thinking of a color among these: "+arr+", which color is it ?");
+                    guesses += 1;
+                    console.log("inside while loop guess input is" + guess_input_text);
+                    finished = check_guess();
+
+                }
+            
+            
+        }
+        
+        function check_guess()
+        {
+            console.log("input text is " + guess_input_text);
+            var str1 = colors[random_number];
+            var str2 = guess_input_text;
+            console.log(str1 +" "+ str2);
+            
+            if(colors.indexOf(guess_input_text) == -1)
+                {
+                    alert("I dont recognize that color!");
+                    return false;
+                }
+                
+            if( str1 < str2 )
+                {
+                    console.log(colors[random_number]);
+                    alert("Your color is too large ");
+                    return false;
+                }
+                
+            if( str1 > str2 )
+                {
+                    console.log(colors[random_number]);
+                    alert("Your color is too small ");
+                    return false;
+                }
+            if( str1 == str2 )
+                {            
+                    alert("You are right ! You took " + guesses + "guesses !");
+                    mybody.style.background = colors[random_number];
+                    return true;
+                }
+            
+        }
+        
+        
+        </script>
+        
+    </body>
+    
+</html>
+
+
