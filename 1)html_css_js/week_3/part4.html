@@ -1,0 +1,97 @@
+<!doctype html>
+<head>
+
+<title>
+    Matching Game</title>
+    
+    <style type="text/css">
+
+                img {position:absolute}
+
+                div{position: absolute;width: 500px;height: 700px;}  
+
+               #rightside {left: 500px; border-left: 1px solid black;
+    
+    </style>
+    
+    <script>
+        
+
+      var  numberofFaces = 5;
+        
+        function generateFaces()
+        {
+            
+        var leftSide = document.getElementById("leftside");
+        var image;
+        var rand1,rand2;
+        var rightSide = document.getElementById("rightside");
+        var leftsideimages;
+        var parent; 
+        var body = document.getElementById("mybody");
+        var temp = numberofFaces;
+                
+                 while(temp  > 0)
+                {
+                    rand1 = Math.random() * 400;
+                    rand2 = Math.random() * 400;
+                    image = document.createElement("img");
+                    image.src = "http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+                    image.style.left = rand1 + "px";
+                    image.style.top = rand2 + "px";
+                    leftSide.appendChild(image);
+                    temp -= 1;
+                
+                }
+            
+            
+            leftsideimages = leftSide.cloneNode(true);
+            leftsideimages.removeChild(leftsideimages.lastChild);
+            rightSide.appendChild(leftsideimages);
+            leftSide.lastChild.onclick = 
+             function nextLevel(event)
+            {
+               
+                event.stopPropagation();
+                
+                while(leftSide.firstChild )
+                    {
+                        leftSide.removeChild(leftSide.firstChild);
+                    }
+                
+                while(rightSide.firstChild)
+                    {
+                        rightSide.removeChild(rightSide.firstChild);
+                    }
+                   
+                numberofFaces += 5;
+                alert(numberofFaces);
+                generateFaces();
+            };
+            
+            body.onclick = function gameover()
+            {
+                alert("Game Over")
+                body.onclick =null;
+                leftSide.lastChild.onclick = null;
+            };
+         
+    
+        }
+        
+      
+        
+    </script>
+
+</head>
+
+<body id="mybody" onload="generateFaces()">
+    
+<h1>Matching Game</h1>    
+    Click on the Extra smiling face.
+    
+<div id="leftside" ></div>
+    
+<div id="rightside" ></div>
+    
+</body>
