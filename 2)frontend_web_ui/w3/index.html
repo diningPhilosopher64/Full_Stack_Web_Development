@@ -111,6 +111,127 @@
         </div>
         </div>
     </div>
+    
+    
+    
+    
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>                
+                <h3 align="left"><strong>Reserve a Table</strong></h3>
+            </div>
+            <div class="modal-body">
+
+             <form class="form-horizontal " role="form">
+
+                <div class="panel">
+                    <div class="panel-body ">
+                        <dl class="dl-horizontal">
+                            <dt >Number of <br> Guests</dt>
+                            <dd>
+                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">1   
+                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">2 
+                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">3 
+                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">4 
+                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">5 
+                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">6
+                            </dd>
+                            <br>
+                            <dt>Section</dt>
+                            
+                            <dd>
+                                <div class="btn-grp" data-toggle="buttons">
+                                
+                                 <label class="btn btn-success active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked>Non-                                         Smoking
+                                  </label>
+                                  <label class="btn btn-danger">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                  </label>
+                                
+                                </div>
+                            </dd>
+
+                            <dt>Date and Time</dt>
+                            <dd>
+                                
+                                   <div class="container">
+                                        <div class="row has-feedback">
+                                                
+                                            <div class="col-sm-2">
+                                                <div class="input-group">
+
+                                                    <input type="text" class="form-control" placeholder="Date"/>
+                                                    <span class="input-group-addon">
+                                                         <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span> 
+                                                 </div>
+                                            </div>
+                                            <div class="col-sm-2 ">
+                                                <div class="input-group">
+
+                                                    <input type="text" class="form-control" placeholder="Time"/>
+                                                    <span class="input-group-addon">
+                                                         <span class="glyphicon glyphicon-time"></span>
+                                                    </span> 
+                                                 </div>
+                                            </div>
+                                        </div>
+                                     </div>                                                                    
+                                
+                            </dd>
+                                <br>
+                            <dt>
+                            
+                            </dt>
+                            <dd>
+                            <button type="submit" class="btn btn-primary">  Reserve</button>
+                            <button type="button" class="btn btn-default btn-sm"
+                       data-dismiss="modal">Cancel</button>
+                            </dd> 
+                        </dl>
+                        
+                        <div class="alert alert-warning alert-dismissible fade in col-sm-11" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>Please
+                     <strong><a href="+852 1234 5678">call</a></strong> us to reserve for more than six guests.
+                </div>
+                        
+                        
+                    </div> 
+                </div>            
+            </form>
+
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <header class="jumbotron">
 
@@ -129,7 +250,13 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                 <p style="padding:40px;"></p>
-                <button type="submit" class="btn btn-warning btn-block " data-toggle="tooltip" title="Call us at +123 " data-placement="bottom" href=#reserveform><a href="#reservetable"></a> Reserve Table</button>                    
+               <!-- <button type="submit" data-toggle="modal" data-target="#reservemodal" class="btn btn-warning btn-block "><a href="#reservetable"></a> Reserve Table</button>  -->
+                <a data-toggle="modal" data-target="#reserveModal" class="btn btn-warning btn-block">
+                    Reserve a Table</a>
+                    
+                    
+                    
+                    <!-- <!-- data-toggle="tooltip" title="Call us at +123 " data-placement="bottom" href=#reserveform -->
                 </div>
             </div>
         </div>
@@ -280,84 +407,7 @@
         </div>
     </div>
 
-
-
-    <div class="row row-content" id="reservetable">
-        <div class="col-xs-12 col-sm-3 col-sm-push-1">
-         <p style="padding:20px;"></p>
-         <h3 align="left"><strong>Reserve a Table</strong></h3>            
-        </div>
-
-        <div class="col-xs-12 col-sm-8 ">
-            <form class="form-horizontal " role="form">
-
-                <div class="panel">
-                    <div class="panel-body">
-                        <dl class="dl-horizontal">
-                            <dt>Number of <br> Guests</dt>
-                            <dd>
-                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">1   
-                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">2 
-                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">3 
-                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">4 
-                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">5 
-                            <input type="radio" name="number" value="1" style="margin: 0 5px 0 5px;">6
-                            </dd>
-                            <br>
-
-                            <dt>Date and Time</dt>
-                            <dd>
-                                
-                                   <div class="container">
-                                        <div class="row has-feedback">
-                                                
-                                            <div class="col-sm-3">
-                                                <div class="input-group">
-
-                                                    <input type="text" class="form-control" placeholder="Date"/>
-                                                    <span class="input-group-addon">
-                                                         <span class="glyphicon glyphicon-calendar"></span>
-                                                    </span> 
-                                                 </div>
-                                            </div>
-                                            <div class="col-sm-3 col-sm-push-1">
-                                                <div class="input-group">
-
-                                                    <input type="text" class="form-control" placeholder="Time"/>
-                                                    <span class="input-group-addon">
-                                                         <span class="glyphicon glyphicon-time"></span>
-                                                    </span> 
-                                                 </div>
-                                            </div>
-                                        </div>
-                                     </div>                                                                    
-                                
-                            </dd>
-                                <br>
-                            <dt>
-                            
-                            </dt>
-                            <dd>
-                            <button type="submit" class="btn btn-primary">  Reserve</button>                                
-                            </dd> 
-                        </dl>
-                        
-                    </div> 
-                </div>            
-            </form>
-
-            <div class="row row-content">
-                <div class="alert alert-warning alert-dismissible fade in col-sm-11" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>Please
-                     <strong><a href="+852 1234 5678">call</a></strong> us to reserve for more than six guests.
-                </div>
-            </div>
-        </div>
-
-
-    </div>
+    
 
 
 
