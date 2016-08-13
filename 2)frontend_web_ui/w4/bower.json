@@ -1,0 +1,19 @@
+{
+  "name": "conFusion",
+  "homepage": "https://github.com/Skon46/Full_Stack_Web_Development",
+  "authors": [
+    "Sourabh Kondapaka <sourabhkondapaka@gmail.com>"
+  ],
+  "description": "Website for an awesome restaurant",
+  "main": "index.html",
+  "keywords": [
+    "conFusion",
+    "Fusion",
+    "Restaurant"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3"
+  }
+}
