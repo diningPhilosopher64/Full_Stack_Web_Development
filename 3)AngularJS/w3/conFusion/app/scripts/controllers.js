@@ -6,7 +6,7 @@ app.controller('MenuController',['$scope','menuFactory',function($scope,menuFact
     $scope.tab = 1;
     $scope.filtText = "";
     $scope.showDetails = false;
-    $scope.dishes = menuFactory.getDishes();     
+    $scope.dishes =  menuFactory.getDishes();     
 
 
     $scope.select = function(setTab) {
@@ -85,10 +85,10 @@ app.controller('MenuController',['$scope','menuFactory',function($scope,menuFact
     }])
 
 
-    .controller('DishDetailController', ['$scope','$routeParams','menuFactory', function($scope,$routeParams,menuFactory) {
+    .controller('DishDetailController', ['$scope','$stateParams','menuFactory', function($scope,$stateParams,menuFactory) {
 
 
-        var dish = menuFactory.getDish(parseInt($routeParams.id,10));
+        var dish = menuFactory.getDish(parseInt($stateParams.id,10));
         
         $scope.dish = dish;
         $scope.feedback = {yourName:"",rating:5, yourComments:"",curDate:"" };
