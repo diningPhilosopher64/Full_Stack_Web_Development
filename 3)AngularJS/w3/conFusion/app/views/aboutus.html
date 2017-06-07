@@ -1,6 +1,10 @@
 
-<!-- saved from url=(0318)https://d3c33hcgiwev3.cloudfront.net/_d11052c81a9f338adbd0f14c2ccb6650_aboutus.html?Expires=1496880000&Signature=OQTmeh0UDDVaQ0mq7zQKcD2o-RCnV31ScFuFmcsU6pZ5x4birZ9KNivFsjoJR68V-btVIs3D2jUaDZPK3r9Kujhz-xxscwK9g-zFRR-GILAaFmLa7QIskFjCCeCIM7TH2hsmmFZHDSun-Cvu626vMDBmk7MHl48-DaEIU2GPt~Y_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><div class="container" ng-controller="AboutController">
+<!--
+<!-- saved from url=(0318)https://d3c33hcgiwev3.cloudfront.net/_d11052c81a9f338adbd0f14c2ccb6650_aboutus.html?Expires=1496880000&Signature=OQTmeh0UDDVaQ0mq7zQKcD2o-RCnV31ScFuFmcsU6pZ5x4birZ9KNivFsjoJR68V-btVIs3D2jUaDZPK3r9Kujhz-xxscwK9g-zFRR-GILAaFmLa7QIskFjCCeCIM7TH2hsmmFZHDSun-Cvu626vMDBmk7MHl48-DaEIU2GPt~Y_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A 
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>  -->
+    
+    
+    <div class="container" ng-controller="AboutController">
         <div class="row">
             <div class="col-xs-12">
                <ul class="breadcrumb">
@@ -14,7 +18,28 @@
             </div>
         </div>
         
-        <div class="row row-content">
+        
+        <div class="col-xs-12 col-sm-8">
+            <h2>Our History</h2>
+            <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
+            <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+            <div class="well">
+                <blockquote>
+                    <p>You better cut the pizza in four pieces because
+                        I'm not hungry enough to eat six.</p>
+                    <footer>Yogi Berra,  
+                        <cite title="Source Title">The Wit and Wisdom of Yogi Berra, P. Pepe, Diversion Books, 2014</cite></footer>
+                </blockquote>                
+            </div>
+
+        </div>
+        
+            
+            
+            
+            
+            
+            <!--
             <div class="col-xs-12 col-sm-8">
                 <h2>Our History</h2>
                 <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
@@ -29,6 +54,8 @@
                 </div>
 
             </div>
+
+            -->
             <div class="col-xs-12 col-sm-4">
 
                 <div class="panel panel-primary">
@@ -49,15 +76,29 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
 
 
         <div class="row row-content">
             <div class="col-xs-12 col-sm-9">
                 <h2>Corporate Leadership</h2>
-               <ul class="media-list">
-					<h4>Implement the Corporate Leaders List here</h4>
-               </ul>
+                
+                    <ul class="media-list tab-pane fade in active">
+                        <li class="media" ng-repeat="leader in leaders">
+                            <div class="media-left media-middle">
+                                <a href="#">
+                                    <img class="media-object img-thumbnail"
+                                         ng-src={{leader.image}} alt="Uthappizza">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h2 class="media-heading">{{leader.name}}</h2> <p>{{leader.designation}}</p>
+                                <p>{{leader.description}}</p>
+
+                            </div>
+                        </li>
+                    </ul>
+               
 
             </div>
              <div class="col-xs-12 col-sm-3">
@@ -151,4 +192,6 @@
             </div>
        </div> 
     </div>
-</body></html>
+    
+  <!--  
+</body></html> -->
